@@ -48,6 +48,54 @@ class _ConversorFormState extends State<ConversorForm> {
   }
 }
 
+class DropAreas extends StatefulWidget{
+  const DropAreas ({Key? key}) : super (key: key);
+
+  @override 
+  _DropAreasState createState() => _DropAreasState();
+}
+
+class _DropAreasState extends State<DropAreas> {
+  String dropdownvalue = 'metro²'; 
+  var deterareas = [
+    'centimetro²',
+    'milimetros²',
+    'quilometros²',
+    'hectare',
+    'acre',
+    'pé²',
+    'polegada²',
+    'alqueire',
+  ];
+
+  @override 
+  Widget build(BuildContext context){
+    return Center(
+      child:Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          DropdownButton(
+            value: dropdownvalue,
+            icon: const Icon(Icons.keyboard_arrow_down),
+            items: items.map((String deterareas){
+              return DropdownMenuItem(
+                value: deterareas,
+                child: Text(deterareas),
+                );
+            }
+            ).toList(),
+            onChanged: (String? newValue){
+              setState(() {
+                dropdownvalue = newValue!;
+              });
+            },
+          )
+        ],) ,
+      );
+  }
+}
+
+
 /*class Conversordearea extends StatelessWidget{
 
   var areacolocada 
