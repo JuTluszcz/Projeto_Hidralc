@@ -13,7 +13,12 @@ class ConversorDeUnidades extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Conversor de Unidades"),
       ),
-      body: const ConversorForm(),
+      body: Center(
+        child: Column(children: const [
+          ConversorForm(),
+          DropConversao(),
+        ],) 
+        ,)
       );
   }
 }
@@ -48,24 +53,27 @@ class _ConversorFormState extends State<ConversorForm> {
   }
 }
 
-class DropAreas extends StatefulWidget{
-  const DropAreas ({Key? key}) : super (key: key);
+class DropConversao extends StatefulWidget{
+  const DropConversao ({Key? key}) : super (key: key);
 
   @override 
-  _DropAreasState createState() => _DropAreasState();
+  _DropConversaoState createState() => _DropConversaoState();
 }
 
-class _DropAreasState extends State<DropAreas> {
-  String dropdownvalue = 'metro²'; 
-  var deterareas = [
-    'centimetro²',
-    'milimetros²',
-    'quilometros²',
-    'hectare',
-    'acre',
-    'pé²',
-    'polegada²',
-    'alqueire',
+class _DropConversaoState extends State<DropConversao> {
+  String dropdownvalue = 'Área'; 
+  var deterconversao = [
+    'Área',
+    'Comprimento',
+    'Energia/Trabalho',
+    'Força',
+    'Massa',
+    'Potência',
+    'Pressão',
+    'Temperatura',
+    'Vazão',
+    'Velocidade',
+    'Volume',
   ];
 
   @override 
@@ -77,7 +85,7 @@ class _DropAreasState extends State<DropAreas> {
           DropdownButton(
             value: dropdownvalue,
             icon: const Icon(Icons.keyboard_arrow_down),
-            items: items.map((String deterareas){
+            items: deterconversao.map((String deterareas){
               return DropdownMenuItem(
                 value: deterareas,
                 child: Text(deterareas),
@@ -95,8 +103,97 @@ class _DropAreasState extends State<DropAreas> {
   }
 }
 
+class ListConversaoModel {
+  final String text;
+  final void Function() onTap;
 
-/*class Conversordearea extends StatelessWidget{
+  ListConversaoModel(this.text, this.onTap);
+}
 
-  var areacolocada 
-} */
+List<ListConversaoModel> createListConversao(){
+  ListConversaoModel cv1 = ListConversaoModel(
+    "Área",
+    () {
+      
+    },
+  );
+
+  ListConversaoModel cv2 = ListConversaoModel(
+    "Comprimento",
+    () {
+      
+    },
+  );
+
+  ListConversaoModel cv3 = ListConversaoModel(
+    "Energia/Trabalho",
+    () {
+      
+    },
+  );
+
+  ListConversaoModel cv4 = ListConversaoModel(
+    "Força",
+    () {
+      
+    },
+  );
+
+  ListConversaoModel cv5 = ListConversaoModel(
+    "Massa",
+    () {
+      
+    },
+  );
+
+  ListConversaoModel cv6 = ListConversaoModel(
+    "Potência",
+    () {
+      
+    },
+  );
+
+  ListConversaoModel cv7 = ListConversaoModel(
+    "Pressão",
+    () {
+      
+    },
+  );
+
+ListConversaoModel cv8 = ListConversaoModel(
+    "Temperatura",
+    () {
+      
+    },
+  );
+
+  ListConversaoModel cv9 = ListConversaoModel(
+    "Vazão",
+    () {
+      
+    },
+  );
+
+  ListConversaoModel cv10 = ListConversaoModel(
+    "Velocidade",
+    () {
+      
+    },
+  );
+
+  ListConversaoModel cv11 = ListConversaoModel(
+    "Volume",
+    () {
+      
+    },
+  );
+  return [cv1,cv2,cv3,cv4,cv5,cv6,cv7,cv8,cv9,cv10,cv11];
+}
+
+var command = List<ListConversaoModel>;
+ConversorEscolha(var command){
+  switch (command){
+    case 1: 
+  }
+}
+ 
