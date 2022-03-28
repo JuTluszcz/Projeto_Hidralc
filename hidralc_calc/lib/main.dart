@@ -30,7 +30,7 @@ class HidralcApp extends StatelessWidget{
           return ListTile(
             title: Text(currDeterm.text),
             onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (currDeterm) => ConversorDeUnidades()));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => currDeterm.route));
             },
           );
           }

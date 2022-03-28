@@ -1,8 +1,11 @@
 // ignore_for_file: file_names
 
+import 'package:flutter/material.dart';
+
 class ListDeterminacoesModel {
   final String text;
-  final void Function() onTap;
+  final Widget route;
+  final void Function()? onTap;
 
-  ListDeterminacoesModel(this.text, this.onTap);
+  ListDeterminacoesModel({required this.text, this.onTap, required this.route,});
 }

@@ -197,3 +197,35 @@ ConversorEscolha(var command){
   }
 }
  
+/*class Opcao{
+  const Opcao({this.titulo,this.icon});
+
+  final String titulo;
+  final IconData icon;
+  
+}
+
+const List<Opcao> opcoes = const<Opcao>[
+  const Opcao(titulo: 'Área'),
+];
+
+class OpcaoCard extends StatelessWidget{
+  const OpcaoCard({Key key,this.opcao}): super(key:key);
+  final Opcao opcao;
+
+  @override
+  Widget build(BuildContext context){
+    final TextTheme textStyle = Theme.of(context).textTheme;
+      return Card(
+        color: Colors.white,
+        child: Center(
+          child: Column(
+            children:<Widget> [
+              Icon(opcao.icon,size:80.0),
+              Text(opcao.titulo, style: TextStyle(fontWeight: FontWeight.bold)),
+              ],
+              ),
+           )
+      );
+  }
+}*/
