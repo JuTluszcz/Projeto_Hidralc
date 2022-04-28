@@ -1,10 +1,14 @@
 
 // ignore_for_file: file_names
 
+//import 'dart:html';
+
 import 'package:flutter/material.dart';
-import 'dart:math';
+//import 'dart:math';
 
 class ConversorDeUnidades extends StatelessWidget {
+  const ConversorDeUnidades({Key? key}) : super(key: key);
+
   get children => null;
 
   @override
@@ -14,9 +18,11 @@ class ConversorDeUnidades extends StatelessWidget {
         title: const Text("Conversor de Unidades"),
       ),
       body: Center(
-        child: Column(children: const [
-          ConversorForm(),
-          DropConversao(),
+        child: Column(children:  [
+          // ignore: prefer_const_constructors
+          //ConversorForm(),
+          //DropConversao(),
+          GridConversor(),
         ],) 
         ,)
       );
@@ -53,16 +59,15 @@ class _ConversorFormState extends State<ConversorForm> {
   }
 }
 
-class DropConversao extends StatefulWidget{
-  const DropConversao ({Key? key}) : super (key: key);
+//class DropConversao extends StatefulWidget{
+  //const DropConversao ({Key? key}) : super (key: key);
 
-  @override 
-  _DropConversaoState createState() => _DropConversaoState();
-}
-
-class _DropConversaoState extends State<DropConversao> {
-  String dropdownvalue = 'Área'; 
-  var deterconversao = [
+ // @override 
+  //_DropConversaoState createState() => _DropConversaoState();
+//}
+ class GridConversor extends StatelessWidget{
+   GridConversor ({Key? key}) : super(key: key);
+  final List myConversao = [
     'Área',
     'Comprimento',
     'Energia/Trabalho',
@@ -78,29 +83,37 @@ class _DropConversaoState extends State<DropConversao> {
 
   @override 
   Widget build(BuildContext context){
-    return Center(
-      child:Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          DropdownButton(
-            value: dropdownvalue,
-            icon: const Icon(Icons.keyboard_arrow_down),
-            items: deterconversao.map((String deterareas){
-              return DropdownMenuItem(
-                value: deterareas,
-                child: Text(deterareas),
-                );
-            }
-            ).toList(),
-            onChanged: (String? newValue){
-              setState(() {
-                dropdownvalue = newValue!;
-              });
-            },
-          )
-        ],) ,
-      );
-  }
+    return Scaffold(
+      resizeToAvoidBottomInset: false,
+    body: SingleChildScrollView(
+      child: Padding( 
+        padding: const EdgeInsets.all(8.0),
+        child:
+        GridView.builder(
+        gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+          maxCrossAxisExtent: 200,
+          childAspectRatio: 3/2,
+          crossAxisSpacing: 20,
+          mainAxisSpacing: 20,  
+          mainAxisExtent: 20,
+          ),
+        itemCount: myConversao.length,
+        itemBuilder: (BuildContext context, index){
+          return Container(
+            height: 200,
+            alignment: Alignment.center,
+            child: Text(myConversao[index]),
+            decoration: BoxDecoration(
+              color: Colors.orange[100],
+              borderRadius: BorderRadius.circular(15),
+              border: Border.all(color: Colors.brown.shade900)
+              ),
+          );
+        })
+        ),
+    )
+    );
+   }
 }
 
 class ListConversaoModel {
