@@ -10,7 +10,7 @@ List<ListDeterminacoesModel> createListDeterminacoes() {
    text:  "Conversor de unidades",route: ConversorDeUnidades(),
   );
   ListDeterminacoesModel item2 = ListDeterminacoesModel(
-   text:  "Conversor de unidades",route: PropriedadesFisicasDosFluidos(),
+   text:  "Propriedades Físicas dos Fluidos",route: PropriedadesFisicasDosFluidos(),
   );
 // ListDeterminacoesModel item2 = ListDeterminacoesModel(
 //   "Propriedades fisicas dos fluidos",

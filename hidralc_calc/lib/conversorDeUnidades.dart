@@ -190,27 +190,21 @@ ListConversaoModel cv8 = ListConversaoModel(
   return [cv1,cv2,cv3,cv4,cv5,cv6,cv7,cv8,cv9,cv10,cv11];
 }
 
-var command = List<ListConversaoModel>;
-ConversorEscolha(var command){
-  switch (command){
-    case 1: 
-  }
-}
+
  
-/*class Opcao{
-  const Opcao({this.titulo,this.icon});
+class Opcao{
+  const Opcao({required this.titulo});
 
   final String titulo;
-  final IconData icon;
   
 }
 
 const List<Opcao> opcoes = const<Opcao>[
-  const Opcao(titulo: 'Área'),
+  Opcao(titulo: 'Área' ),
 ];
 
 class OpcaoCard extends StatelessWidget{
-  const OpcaoCard({Key key,this.opcao}): super(key:key);
+  const OpcaoCard({required Key key,required this.opcao}): super(key:key);
   final Opcao opcao;
 
   @override
@@ -221,11 +215,10 @@ class OpcaoCard extends StatelessWidget{
         child: Center(
           child: Column(
             children:<Widget> [
-              Icon(opcao.icon,size:80.0),
               Text(opcao.titulo, style: TextStyle(fontWeight: FontWeight.bold)),
               ],
               ),
            )
       );
   }
-}*/
+}
