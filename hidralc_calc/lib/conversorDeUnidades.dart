@@ -18,46 +18,45 @@ class ConversorDeUnidades extends StatelessWidget {
         title: const Text("Conversor de Unidades"),
       ),
       body: Center(
-        child: Column(children:  [
+        child: 
           // ignore: prefer_const_constructors
           //ConversorForm(),
           //DropConversao(),
           GridConversor(),
-        ],) 
-        ,)
-      );
-  }
-}
-
-class ConversorForm extends StatefulWidget {
-  const ConversorForm({Key? key}) : super(key: key);
-
-  @override
-  State<ConversorForm> createState() => _ConversorFormState();
-}
-
-class _ConversorFormState extends State<ConversorForm> {
-  final _formKey = GlobalKey<FormState>();
-
-  @override
-  Widget build (BuildContext context){
-    return Form(
-      key: _formKey,
-      child: Column(
-        children: [
-          TextFormField(
-            validator: (value){
-              if (value == null || value.isEmpty){
-                return 'Insira um valor';
-              }
-              return null;
-            }
           )
-         ],
-        ),
-    );
+        );
   }
 }
+
+//class ConversorForm extends StatefulWidget {
+ // const ConversorForm({Key? key}) : super(key: key);
+
+ // @override
+ // State<ConversorForm> createState() => _ConversorFormState();
+//}
+
+//class _ConversorFormState extends State<ConversorForm> {
+ // final _formKey = GlobalKey<FormState>();
+
+ // @override
+ // Widget build (BuildContext context){
+    //return Form(
+     // key: _formKey,
+     // child: Column(
+      //  children: [
+      //  TextFormField(
+       //     validator: (value){
+      //        if (value == null || value.isEmpty){
+      //          return 'Insira um valor';
+      //        }
+       //       return null;
+      //      }
+      //    )
+      //   ],
+     //   ),
+  //  );
+//  }
+//}
 
 //class DropConversao extends StatefulWidget{
   //const DropConversao ({Key? key}) : super (key: key);
@@ -84,7 +83,6 @@ class _ConversorFormState extends State<ConversorForm> {
   @override 
   Widget build(BuildContext context){
     return Scaffold(
-      resizeToAvoidBottomInset: false,
     body: SingleChildScrollView(
       child: Padding( 
         padding: const EdgeInsets.all(8.0),
@@ -103,11 +101,6 @@ class _ConversorFormState extends State<ConversorForm> {
             height: 200,
             alignment: Alignment.center,
             child: Text(myConversao[index]),
-            decoration: BoxDecoration(
-              color: Colors.orange[100],
-              borderRadius: BorderRadius.circular(15),
-              border: Border.all(color: Colors.brown.shade900)
-              ),
           );
         })
         ),
@@ -205,7 +198,7 @@ ListConversaoModel cv8 = ListConversaoModel(
 
 
  
-class Opcao{
+/*class Opcao{
   const Opcao({required this.titulo});
 
   final String titulo;
@@ -234,4 +227,4 @@ class OpcaoCard extends StatelessWidget{
            )
       );
   }
-}
+}*/
