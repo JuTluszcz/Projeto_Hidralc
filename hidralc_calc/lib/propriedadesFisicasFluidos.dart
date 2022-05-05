@@ -1,6 +1,7 @@
-// ignore_for_file: file_names
+// ignore_for_file: file_names, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:hidralc_calc/propriedadesDaAgua.dart';
 
 class  PropriedadesFisicasDosFluidos extends StatelessWidget {
   @override
@@ -25,11 +26,13 @@ class _ListPropFisicas extends State<ListPropFisicas> {
   Widget build (BuildContext context){
     return MaterialApp(
       home: ListView(
-        children: const [
+        children:  [
           Card(
-            child:ListTile(
-              title: Text("Propriedades da água"),
+            child:TextButton(
+             onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => PropriedadesDaAgua()));},
+             child: Text('Propriedades da Agua'),
             )
+            
           ),
           Card(
             child:ListTile(
