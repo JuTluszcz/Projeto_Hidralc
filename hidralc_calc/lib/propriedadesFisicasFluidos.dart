@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:hidralc_calc/propriedadesDaAgua.dart';
+import 'propriedadesDaAgua.dart';
 
 class  PropriedadesFisicasDosFluidos extends StatelessWidget {
   @override

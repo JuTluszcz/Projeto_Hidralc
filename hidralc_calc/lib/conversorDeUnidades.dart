@@ -88,6 +88,7 @@ class ConversorDeUnidades extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child:
         GridView.builder(
+        shrinkWrap: true,
         gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
           maxCrossAxisExtent: 200,
           childAspectRatio: 3/2,

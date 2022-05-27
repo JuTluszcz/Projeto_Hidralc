@@ -1,12 +1,13 @@
 
 
 import 'package:flutter/material.dart';
+import 'createPropriedadesDaAgua.dart'; 
 
 class PropriedadesDaAgua extends StatelessWidget{
   final dropValue = ValueNotifier('');
   final dropOpcoes = ['0', '4','10','20','30','40','50','60','80','100'];
 
-  PropriedadesDaAgua({Key? key}) : super(key:  key);
+  PropriedadesDaAgua(Card card, {Key? key}) : super(key:  key);
 
   @override 
   Widget build(BuildContext context){
