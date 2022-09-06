@@ -111,7 +111,7 @@ class ConversorDeUnidades extends StatelessWidget {
    }
 }
 
-class ListConversaoModel {
+/*class ListConversaoModel {
   final String text;
   final void Function() onTap;
 
@@ -201,7 +201,7 @@ ListConversaoModel cv8 = ListConversaoModel(
 
 
  
-/*class Opcao{
+class Opcao{
   const Opcao({required this.titulo});
 
   final String titulo;

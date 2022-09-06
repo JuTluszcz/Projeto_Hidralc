@@ -1,13 +1,13 @@
 // ignore_for_file: file_names
 
-import 'package:hidralc_calc/escoamentoEmCondutosForcados.dart';
-import 'package:hidralc_calc/escoamentoEmondutosLivres.dart';
-import 'package:hidralc_calc/hidrodinamicaBasica.dart';
-import 'package:hidralc_calc/propriedadesFisicasFluidos.dart';
-import 'package:hidralc_calc/sistemaDeDerivacoes.dart';
+import 'package:hidralc_calc/escoamento_em_condutos_forcados.dart';
+import 'package:hidralc_calc/escoamento_em_condutos_livres.dart';
+import 'package:hidralc_calc/hidrodinamica_basica.dart';
+import 'package:hidralc_calc/propriedades_fisicas_fluidos.dart';
+import 'package:hidralc_calc/sistema_de_derivacoes.dart';
 
-import 'conversorDeUnidades.dart';
-import 'listDeterminacoesModel.dart';
+import 'conversor_de_unidades.dart';
+import 'list_determinacoes_model.dart';
 
 List<ListDeterminacoesModel> createListDeterminacoes() {
   ListDeterminacoesModel item1 = ListDeterminacoesModel(

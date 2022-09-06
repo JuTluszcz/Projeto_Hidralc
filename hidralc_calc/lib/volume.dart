@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class Comprimento extends StatelessWidget{
+class Volume extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Comprimento"),
+        title: const Text("Volume"),
       ),
     );
   }

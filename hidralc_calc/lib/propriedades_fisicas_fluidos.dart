@@ -2,11 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:hidralc_calc/capilaridade.dart';
-import 'package:hidralc_calc/densidadesRelativasUsuais.dart';
-import 'package:hidralc_calc/popUpPropriedadesfisicasDosFluidos.dart';
-import 'package:hidralc_calc/propriedadesDaAgua.dart';
-import 'package:hidralc_calc/tensaoSuperficialUsual.dart';
-import 'propriedadesDaAgua.dart';
+import 'package:hidralc_calc/densidades_relativas_usuais.dart';
+import 'package:hidralc_calc/pop_up_propriedades_fisicas_dos_fluidos.dart';
+import 'package:hidralc_calc/propriedades_da_agua.dart';
+import 'package:hidralc_calc/tensao_superficial_usual.dart';
+import 'propriedades_da_agua.dart';
 
 class  PropriedadesFisicasDosFluidos extends StatelessWidget {
   @override

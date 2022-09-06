@@ -1,7 +1,6 @@
 
 
 import 'package:flutter/material.dart';
-import 'createPropriedadesDaAgua.dart'; 
 
 class PropriedadesDaAgua extends StatelessWidget{
   final dropValue = ValueNotifier('');

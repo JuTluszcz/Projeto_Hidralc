@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
-import 'package:hidralc_calc/conversorDeUnidades.dart';
-import 'package:hidralc_calc/createListDeterminacoes.dart';
-import 'package:hidralc_calc/listDeterminacoesModel.dart';
+import 'package:hidralc_calc/conversor_de_unidades.dart';
+import 'package:hidralc_calc/create_list_determinacoes.dart';
+import 'package:hidralc_calc/list_determinacoes_model.dart';
 import './determinacao.dart';
 
 main() {
