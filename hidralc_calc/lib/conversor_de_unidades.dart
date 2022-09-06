@@ -4,10 +4,11 @@
 //import 'dart:html';
 
 import 'package:flutter/material.dart';
+import 'package:hidralc_calc/area.dart';
 //import 'dart:math';
 
 class ConversorDeUnidades extends StatelessWidget {
-  const ConversorDeUnidades({Key? key}) : super(key: key);
+  const ConversorDeUnidades({Key? key, route, text}) : super(key: key);
 
   get children => null;
 
@@ -118,6 +119,7 @@ class ListConversaoModel {
 }
 
 List<ListConversaoModel> createListConversao(){
+  
   ListConversaoModel cv1 = ListConversaoModel(
     "Área",
     () {
