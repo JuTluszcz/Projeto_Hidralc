@@ -6,8 +6,9 @@ import 'createPropriedadesDaAgua.dart';
 class PropriedadesDaAgua extends StatelessWidget{
   final dropValue = ValueNotifier('');
   final dropOpcoes = ['0', '4','10','20','30','40','50','60','80','100'];
-
-  PropriedadesDaAgua(Card card, {Key? key}) : super(key:  key);
+  final listPropriedadesDaAgua;
+  
+  PropriedadesDaAgua({Key? key, this.listPropriedadesDaAgua}) : super(key:  key);
 
   @override 
   Widget build(BuildContext context){
@@ -25,10 +26,15 @@ class PropriedadesDaAgua extends StatelessWidget{
               items: dropOpcoes.map((opcao) => DropdownMenuItem(
                 value: opcao,
                 child: Text(opcao),
-                )).toList(),
-            );
-          }),
+                )).toList(
+ 
+                ),
+              );
+          }
         ),
-      );
-    }
+      ),
+    );
+  }
+
 }
+
