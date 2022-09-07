@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:hidralc_calc/grau_zero.dart';
 
 class PropriedadesDaAgua extends StatelessWidget{
   final dropValue = ValueNotifier('');
@@ -21,7 +22,7 @@ class PropriedadesDaAgua extends StatelessWidget{
               return DropdownButton(
               hint: const Text('Escolha a temperatura'),
               value: (value.isEmpty) ? null : value, 
-              onChanged: (escolha)=> dropValue.value = escolha.toString(),
+              onChanged: (escolha){Navigator.push(context,MaterialPageRoute(builder:(context)=>GrauZero()));},
               items: dropOpcoes.map((opcao) => DropdownMenuItem(
                 value: opcao,
                 child: Text(opcao),

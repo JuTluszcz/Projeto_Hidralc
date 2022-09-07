@@ -11,7 +11,7 @@ import 'list_determinacoes_model.dart';
 
 List<ListDeterminacoesModel> createListDeterminacoes() {
   ListDeterminacoesModel item1 = ListDeterminacoesModel(
-   text:  "Conversor de unidades",route: const ConversorDeUnidades(),
+   text:  "Conversor de unidades",route: ConversorDeUnidades(),
   );
   ListDeterminacoesModel item2 = ListDeterminacoesModel(
    text:  "Propriedades Físicas dos Fluidos",route: PropriedadesFisicasDosFluidos(),

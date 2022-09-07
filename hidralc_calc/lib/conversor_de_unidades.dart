@@ -5,9 +5,150 @@
 
 import 'package:flutter/material.dart';
 import 'package:hidralc_calc/area.dart';
+import 'package:hidralc_calc/comprimento.dart';
+import 'package:hidralc_calc/energia_trabalho.dart';
+import 'package:hidralc_calc/forca.dart';
+import 'package:hidralc_calc/massa.dart';
+import 'package:hidralc_calc/potencia.dart';
+import 'package:hidralc_calc/pressao.dart';
+import 'package:hidralc_calc/temperatura.dart';
+import 'package:hidralc_calc/vazao.dart';
+import 'package:hidralc_calc/velocidade.dart';
+import 'package:hidralc_calc/volume.dart';
 //import 'dart:math';
 
-class ConversorDeUnidades extends StatelessWidget {
+class  ConversorDeUnidades extends StatelessWidget {
+  const ConversorDeUnidades({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Conversor de Unidades"),
+        actions: [
+          IconButton( icon: const Icon( Icons.help_outline,), onPressed:() {
+            showDialog(
+              context: context,
+              builder: (BuildContext context) => _buildPopupDialog(context),
+            );
+          },)
+        ],
+      ),
+      body: const ListPropFisicas(),
+    );
+  }
+}
+
+_buildPopupDialog(BuildContext context) {
+  return AlertDialog(
+    title: const Text('Sumário'),
+    content: Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: const <Widget>[
+        Text("Os sistemas de unidades geralmente são baseados em dois tipos, os consideram como grandezas fundamentais a Força (F) o comprimento (L) e o tempo (T), sendo denominado de FLT, e os que consideram como unidade fundamental a massa (M), o comprimento (L) e o tempo (T), sendo denominado de MLT. Essas grandezas expressam uma quantidade física de m parâmetro de interesse. As grandezas são expressas em unidades de medida. Os sistemas de unidades mais utilizados em hidráulica são o MKS, o CGS e o MK*S. O MKS é também reconhecido com sistema internacional (SI), trata-se de um sistema MLT. O CGS também faz parte do sistema MLT. Já o MK*S, também denominado de sistema técnico (ST), utiliza unidades no sistema FLT.  Neste contexto algumas equivalências devem ser destacadas. A grandeza massa, no CGS é expressa em g, no MKS é expressa em kg e np MK*S é expressa em UTM, sendo 1 UTM = 9,81 kg e 1 lb = 0,4554 kg. A grandeza força, no CGS é expressa em dina, no MKS é expressa em N e no MK*S é expressa em kgf, sendo 1 kgf = 9,81 N. "),
+      ],
+    ),
+    actions: <Widget>[
+      TextButton(
+        onPressed: () {
+          Navigator.of(context).pop();
+        },
+        child: const Text('Close'),
+      ),
+    ],
+  );
+}
+
+
+
+
+class ListPropFisicas extends StatefulWidget{
+  const ListPropFisicas({Key? key}) : super (key: key);
+  @override
+  _ListPropFisicas createState()=> _ListPropFisicas();
+}
+
+class _ListPropFisicas extends State<ListPropFisicas> {
+  @override 
+  Widget build (BuildContext context){
+    return MaterialApp(
+      home: ListView(
+        children:  [
+          Card(
+            child:TextButton(
+             onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Area()));},
+             child: const Text('Area'),
+            ) 
+          ),
+          Card(
+            child:TextButton(
+              onPressed: (){Navigator.push(context,MaterialPageRoute(builder: (context)=>Comprimento()));},
+              child: const Text("Comprimento"),
+            )
+          ),
+          Card(
+            child:TextButton(
+              onPressed: (){Navigator.push(context,MaterialPageRoute(builder:(context)=> EnergiaTrabalho()));},
+              child:const Text("Energia/Trabalho")
+            )
+          ),
+          Card(
+            child:TextButton(
+              onPressed: (){Navigator.push(context,MaterialPageRoute(builder:(context)=>Forca()));},
+              child: const Text("Força")
+            )
+          ),
+           Card(
+            child:TextButton(
+              onPressed: (){Navigator.push(context,MaterialPageRoute(builder:(context)=>Massa()));},
+              child: const Text("Massa")
+            )
+          ),
+           Card(
+            child:TextButton(
+              onPressed: (){Navigator.push(context,MaterialPageRoute(builder:(context)=>Potencia()));},
+              child: const Text("Potencia")
+            )
+          ),
+           Card(
+            child:TextButton(
+              onPressed: (){Navigator.push(context,MaterialPageRoute(builder:(context)=>Pressao()));},
+              child: const Text("Pressão")
+            )
+          ),
+           Card(
+            child:TextButton(
+              onPressed: (){Navigator.push(context,MaterialPageRoute(builder:(context)=>Temperatura()));},
+              child: const Text("Temperatura")
+            )
+          ),
+           Card(
+            child:TextButton(
+              onPressed: (){Navigator.push(context,MaterialPageRoute(builder:(context)=>Vazao()));},
+              child: const Text("Vazão")
+            )
+          ),
+           Card(
+            child:TextButton(
+              onPressed: (){Navigator.push(context,MaterialPageRoute(builder:(context)=>Velocidade()));},
+              child: const Text("Velocidade")
+            )
+          ),
+           Card(
+            child:TextButton(
+              onPressed: (){Navigator.push(context,MaterialPageRoute(builder:(context)=>Volume()));},
+              child: const Text("Volume")
+            )
+          ),
+        ],
+        shrinkWrap: true,
+      )
+    );
+  }
+}
+
+/*class ConversorDeUnidades extends StatelessWidget {
   const ConversorDeUnidades({Key? key, route, text}) : super(key: key);
 
   get children => null;
@@ -64,8 +205,10 @@ class ConversorDeUnidades extends StatelessWidget {
 
  // @override 
   //_DropConversaoState createState() => _DropConversaoState();
-//}
- class GridConversor extends StatelessWidget{
+//}*/
+
+
+ /*class GridConversor extends StatelessWidget{
    GridConversor ({Key? key}) : super(key: key);
   final List myConversao = [
     'Área',
@@ -97,7 +240,7 @@ class ConversorDeUnidades extends StatelessWidget {
           mainAxisSpacing: 20,  
           mainAxisExtent: 20,
           ),
-        itemCount: myConversao.length,
+        itemCount: createConversorDeUnidades().length,
         itemBuilder: (BuildContext context, index){
           return Container(
             height: 200,
@@ -109,7 +252,7 @@ class ConversorDeUnidades extends StatelessWidget {
     )
     );
    }
-}
+}*/
 
 /*class ListConversaoModel {
   final String text;
