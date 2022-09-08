@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 
-class Capilaridade extends StatelessWidget{
+class Capilaridade extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Capilaridade"),
-      ),
-    );
+        appBar: AppBar(
+      title: const Text("Capilaridade"),
+    ));
   }
 }

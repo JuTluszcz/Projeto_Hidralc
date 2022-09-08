@@ -11,19 +11,24 @@ import 'list_determinacoes_model.dart';
 
 List<ListDeterminacoesModel> createListDeterminacoes() {
   ListDeterminacoesModel item1 = ListDeterminacoesModel(
-   text:  "Conversor de unidades",route: ConversorDeUnidades(),
+    text: "Conversor de unidades",
+    route: const ConversorDeUnidades(),
   );
   ListDeterminacoesModel item2 = ListDeterminacoesModel(
-   text:  "Propriedades Físicas dos Fluidos",route: PropriedadesFisicasDosFluidos(),
+    text: "Propriedades Físicas dos Fluidos",
+    route: PropriedadesFisicasDosFluidos(),
   );
   ListDeterminacoesModel item3 = ListDeterminacoesModel(
-    text: "Hidrodinâmica Básica", route: HidrodinamicaBasica(),);
+    text: "Hidrodinâmica Básica",
+    route: HidrodinamicaBasica(),
+  );
   ListDeterminacoesModel item4 = ListDeterminacoesModel(
-    text: "Escoamento em Condutos Forçados", route: EscoamentoEmCondutosForcaods());
-  ListDeterminacoesModel item5 = ListDeterminacoesModel(
-    text: "Escoamento em condutos livres", route: EscoamentoEmCondutosLivres());
-  ListDeterminacoesModel item6 = ListDeterminacoesModel(
-    text: "Sistema de Derivações", route: SistemasDeDerivacoes());
+      text: "Escoamento em Condutos Forçados",
+      route: EscoamentoEmCondutosForcaods());
+  //ListDeterminacoesModel item5 = ListDeterminacoesModel(
+  //text: "Escoamento em condutos livres", route: EscoamentoEmCondutosLivres());
+  //ListDeterminacoesModel item6 = ListDeterminacoesModel(
+  //text: "Sistema de Derivações", route: SistemasDeDerivacoes());
 
-return [item1, item2,item3,item4,item5,item5,item6];
+  return [item1, item2, item3, item4];
 }
