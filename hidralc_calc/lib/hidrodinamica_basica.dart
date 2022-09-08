@@ -7,7 +7,7 @@ class HidrodinamicaBasica extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("Propriedades Fisicas dos Fluidos"),
+          title: const Text("Hidrodinâmica Básica"),
         ),
         body: const BuildHridrodinamicaBasica());
   }
@@ -28,6 +28,41 @@ class BuildHridrodinamicaBasica extends StatelessWidget {
                 border: OutlineInputBorder(), hintText: 'vazão em m³/s'),
           ),
         ),
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+          child: TextField(
+            decoration: InputDecoration(
+                border: OutlineInputBorder(), hintText: 'Diâmetro em metros'),
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+          child: TextField(
+            decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: 'Coeficiente de vazão adimensional'),
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+          child: TextField(
+            decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: 'Carga Hidráulica em metros'),
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+          child: TextField(
+            decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: 'Gravidade (sempre será 9,81)'),
+          ),
+        ),
+        OutlinedButton(
+          onPressed: (null),
+          child: Text("Calcular"),
+        )
       ],
     );
   }
